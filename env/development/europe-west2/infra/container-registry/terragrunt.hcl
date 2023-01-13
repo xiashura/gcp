@@ -7,7 +7,7 @@ include "root" {
 }
 
 include "envcommon" {
-  path   = "${dirname(find_in_parent_folders())}/services/container-registry-gke.hcl"
+  path   = "${dirname(find_in_parent_folders())}/services/container-registry-gcp.hcl"
   expose = true
 }
 
