@@ -16,9 +16,9 @@ stdenv.mkDerivation {
     google-cloud-sdk
     terraform 
     terragrunt
+    jq
+    graphviz-nox
     kubectl
     kubernetes-helm-wrapped
   ];
 }
-
-
