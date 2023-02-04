@@ -1,0 +1,572 @@
+{
+  "version": 4,
+  "terraform_version": "1.3.6",
+  "serial": 11,
+  "lineage": "cb69b8cf-f1c3-ef9d-d773-8f0d3e6610a0",
+  "outputs": {
+    "available_zones": {
+      "value": [
+        "europe-west2-a",
+        "europe-west2-b",
+        "europe-west2-c"
+      ],
+      "type": [
+        "list",
+        "string"
+      ]
+    },
+    "instances_details": {
+      "value": [
+        {
+          "advanced_machine_features": [
+            {
+              "enable_nested_virtualization": false,
+              "threads_per_core": 1,
+              "visible_core_count": 0
+            }
+          ],
+          "allow_stopping_for_update": null,
+          "attached_disk": [],
+          "boot_disk": [
+            {
+              "auto_delete": true,
+              "device_name": "persistent-disk-0",
+              "disk_encryption_key_raw": "",
+              "disk_encryption_key_sha256": "",
+              "initialize_params": [
+                {
+                  "image": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20230125",
+                  "labels": {},
+                  "size": 10,
+                  "type": "pd-ssd"
+                }
+              ],
+              "kms_key_self_link": "",
+              "mode": "READ_WRITE",
+              "source": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/zones/europe-west2-c/disks/default-001"
+            }
+          ],
+          "can_ip_forward": false,
+          "confidential_instance_config": [],
+          "cpu_platform": "Intel Broadwell",
+          "current_status": "RUNNING",
+          "deletion_protection": false,
+          "description": "",
+          "desired_status": null,
+          "enable_display": false,
+          "guest_accelerator": [],
+          "hostname": "",
+          "id": "projects/steady-burner-372518/zones/europe-west2-c/instances/default-001",
+          "instance_id": "5782934417952827464",
+          "label_fingerprint": "42WmSpB8rSM=",
+          "labels": {},
+          "machine_type": "e2-micro",
+          "metadata": {
+            "ssh-keys": "xiashura:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDkYCJ6Vgfm27RFiSfFVkjban7TnR2t66pQkNwPLC1VAdcmcNdUX0QAcwfoJiREwb7IkquBOEGoRTtRsvhmTkFf04Xx2bk8bdPGnjQEq8KV3SpdYm1WBMIMigiz0YXiXsmIDQnrtRLr7IubnZ9eo+r0X9+vgW9qJHYsl9pRF5Cy7lec94P++jrYdxzT2el+uw1cpNJhx8NyBSak/1A8PFKG1jypgEmjwrnlZ0PRVMmFxKnO03SH0pH1looD4b6QFf/eyiB+b/Kk5grXtTS7tlq9EJtbYilTG7GoU7Oz+7WO+Yd21vwjM/vQCo3tNxcgsTJ7PZ4RR/7GzEAiKo1gX7m7k2Llx38RWgURlws8Sv0PTx/rh5JyBk8DSiSeATIm3+/oYGwidCsZ4685Ntgg3lhHyWpJpXi7qcu6djTIgTh4r5ddWopL1+wMZQYSjF50FMr/T4ir1Sft0glTLeMiPijC5AN9xunoPyEKijBt6ncxHqrdSiggaNnBiWR+ZbuQTXE= xiashura@Sergeis-MacBook-Air.local\nxiawura:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIJ/z3mxJAV/5t629/FHeydbu14HYjnESeiYSXeBvgcCktkLP4bd6BWAGw4EZKfoJOhJ8GrNibbTTFwjnpSNkfY= google-ssh {\"userName\":\"xiawura@gmail.com\",\"expireOn\":\"2023-01-31T09:07:04+0000\"}\nxiawura:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCDVLwJS73h7gT01K8cip77Bn34vjjmGoPKrIzDsCPxV9nk7gS4Yrgzlun3EfRJZpqILJ0izk4YOJL2pi7/ScRm661h648GihszOAwgOnOwX+gHWH0IIf7D7piNHtd3ZyDBnyw95bjfSftKgqJn2YVMpUgfGY+quANbpyzCKjlLKUnRVlSeBdD2WSCl/wEoeRxcup5Bm3j/x73vbZWL4FFc1CGZKSuWiUUzyIYNBHeUGiCp1kwoLOuw9XC5I2l+MNaeatr6lx+JFUoRraau36hDCcWb5pgv2Jn3LL6FR2SmE7EA63SS8sf1SJajHlSc8IYUmkbjnEkarW9rLoedPbtx google-ssh {\"userName\":\"xiawura@gmail.com\",\"expireOn\":\"2023-01-31T09:07:19+0000\"}"
+          },
+          "metadata_fingerprint": "ue7xOcSSCD0=",
+          "metadata_startup_script": null,
+          "min_cpu_platform": "",
+          "name": "default-001",
+          "network_interface": [
+            {
+              "access_config": [
+                {
+                  "nat_ip": "34.142.27.9",
+                  "network_tier": "PREMIUM",
+                  "public_ptr_domain_name": ""
+                }
+              ],
+              "alias_ip_range": [],
+              "ipv6_access_config": [],
+              "ipv6_access_type": "",
+              "name": "nic0",
+              "network": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/global/networks/infrastructure-gke-k8s-network",
+              "network_ip": "10.0.0.4",
+              "nic_type": "",
+              "queue_count": 0,
+              "stack_type": "IPV4_ONLY",
+              "subnetwork": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/regions/europe-west2/subnetworks/infrastructure-gke-k8s-subnet",
+              "subnetwork_project": "steady-burner-372518"
+            }
+          ],
+          "project": "steady-burner-372518",
+          "reservation_affinity": [],
+          "resource_policies": [],
+          "scheduling": [
+            {
+              "automatic_restart": true,
+              "instance_termination_action": "",
+              "min_node_cpus": 0,
+              "node_affinities": [],
+              "on_host_maintenance": "MIGRATE",
+              "preemptible": false,
+              "provisioning_model": "STANDARD"
+            }
+          ],
+          "scratch_disk": [],
+          "self_link": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/zones/europe-west2-c/instances/default-001",
+          "service_account": [
+            {
+              "email": "terraform@steady-burner-372518.iam.gserviceaccount.com",
+              "scopes": [
+                "https://www.googleapis.com/auth/cloud-platform"
+              ]
+            }
+          ],
+          "shielded_instance_config": [
+            {
+              "enable_integrity_monitoring": true,
+              "enable_secure_boot": false,
+              "enable_vtpm": true
+            }
+          ],
+          "source_instance_template": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/global/instanceTemplates/default-instance-template-20230131083416630900000001",
+          "tags": [
+            "develop",
+            "git",
+            "ssh-public"
+          ],
+          "tags_fingerprint": "-scgZ3g7_c0=",
+          "timeouts": null,
+          "zone": "europe-west2-c"
+        }
+      ],
+      "type": [
+        "tuple",
+        [
+          [
+            "object",
+            {
+              "advanced_machine_features": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enable_nested_virtualization": "bool",
+                    "threads_per_core": "number",
+                    "visible_core_count": "number"
+                  }
+                ]
+              ],
+              "allow_stopping_for_update": "bool",
+              "attached_disk": [
+                "list",
+                [
+                  "object",
+                  {
+                    "device_name": "string",
+                    "disk_encryption_key_raw": "string",
+                    "disk_encryption_key_sha256": "string",
+                    "kms_key_self_link": "string",
+                    "mode": "string",
+                    "source": "string"
+                  }
+                ]
+              ],
+              "boot_disk": [
+                "list",
+                [
+                  "object",
+                  {
+                    "auto_delete": "bool",
+                    "device_name": "string",
+                    "disk_encryption_key_raw": "string",
+                    "disk_encryption_key_sha256": "string",
+                    "initialize_params": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "image": "string",
+                          "labels": [
+                            "map",
+                            "string"
+                          ],
+                          "size": "number",
+                          "type": "string"
+                        }
+                      ]
+                    ],
+                    "kms_key_self_link": "string",
+                    "mode": "string",
+                    "source": "string"
+                  }
+                ]
+              ],
+              "can_ip_forward": "bool",
+              "confidential_instance_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enable_confidential_compute": "bool"
+                  }
+                ]
+              ],
+              "cpu_platform": "string",
+              "current_status": "string",
+              "deletion_protection": "bool",
+              "description": "string",
+              "desired_status": "string",
+              "enable_display": "bool",
+              "guest_accelerator": [
+                "list",
+                [
+                  "object",
+                  {
+                    "count": "number",
+                    "type": "string"
+                  }
+                ]
+              ],
+              "hostname": "string",
+              "id": "string",
+              "instance_id": "string",
+              "label_fingerprint": "string",
+              "labels": [
+                "map",
+                "string"
+              ],
+              "machine_type": "string",
+              "metadata": [
+                "map",
+                "string"
+              ],
+              "metadata_fingerprint": "string",
+              "metadata_startup_script": "string",
+              "min_cpu_platform": "string",
+              "name": "string",
+              "network_interface": [
+                "list",
+                [
+                  "object",
+                  {
+                    "access_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "nat_ip": "string",
+                          "network_tier": "string",
+                          "public_ptr_domain_name": "string"
+                        }
+                      ]
+                    ],
+                    "alias_ip_range": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "ip_cidr_range": "string",
+                          "subnetwork_range_name": "string"
+                        }
+                      ]
+                    ],
+                    "ipv6_access_config": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "external_ipv6": "string",
+                          "external_ipv6_prefix_length": "string",
+                          "network_tier": "string",
+                          "public_ptr_domain_name": "string"
+                        }
+                      ]
+                    ],
+                    "ipv6_access_type": "string",
+                    "name": "string",
+                    "network": "string",
+                    "network_ip": "string",
+                    "nic_type": "string",
+                    "queue_count": "number",
+                    "stack_type": "string",
+                    "subnetwork": "string",
+                    "subnetwork_project": "string"
+                  }
+                ]
+              ],
+              "project": "string",
+              "reservation_affinity": [
+                "list",
+                [
+                  "object",
+                  {
+                    "specific_reservation": [
+                      "list",
+                      [
+                        "object",
+                        {
+                          "key": "string",
+                          "values": [
+                            "list",
+                            "string"
+                          ]
+                        }
+                      ]
+                    ],
+                    "type": "string"
+                  }
+                ]
+              ],
+              "resource_policies": [
+                "list",
+                "string"
+              ],
+              "scheduling": [
+                "list",
+                [
+                  "object",
+                  {
+                    "automatic_restart": "bool",
+                    "instance_termination_action": "string",
+                    "min_node_cpus": "number",
+                    "node_affinities": [
+                      "set",
+                      [
+                        "object",
+                        {
+                          "key": "string",
+                          "operator": "string",
+                          "values": [
+                            "set",
+                            "string"
+                          ]
+                        }
+                      ]
+                    ],
+                    "on_host_maintenance": "string",
+                    "preemptible": "bool",
+                    "provisioning_model": "string"
+                  }
+                ]
+              ],
+              "scratch_disk": [
+                "list",
+                [
+                  "object",
+                  {
+                    "interface": "string"
+                  }
+                ]
+              ],
+              "self_link": "string",
+              "service_account": [
+                "list",
+                [
+                  "object",
+                  {
+                    "email": "string",
+                    "scopes": [
+                      "set",
+                      "string"
+                    ]
+                  }
+                ]
+              ],
+              "shielded_instance_config": [
+                "list",
+                [
+                  "object",
+                  {
+                    "enable_integrity_monitoring": "bool",
+                    "enable_secure_boot": "bool",
+                    "enable_vtpm": "bool"
+                  }
+                ]
+              ],
+              "source_instance_template": "string",
+              "tags": [
+                "set",
+                "string"
+              ],
+              "tags_fingerprint": "string",
+              "timeouts": [
+                "object",
+                {
+                  "create": "string",
+                  "delete": "string",
+                  "update": "string"
+                }
+              ],
+              "zone": "string"
+            }
+          ]
+        ]
+      ],
+      "sensitive": true
+    },
+    "instances_self_links": {
+      "value": [
+        "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/zones/europe-west2-c/instances/default-001"
+      ],
+      "type": [
+        "tuple",
+        [
+          "string"
+        ]
+      ]
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "google_compute_zones",
+      "name": "available",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "projects/steady-burner-372518/regions/europe-west2",
+            "names": [
+              "europe-west2-a",
+              "europe-west2-b",
+              "europe-west2-c"
+            ],
+            "project": "steady-burner-372518",
+            "region": "europe-west2",
+            "status": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_instance_from_template",
+      "name": "compute_instance",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "advanced_machine_features": [
+              {
+                "enable_nested_virtualization": false,
+                "threads_per_core": 1,
+                "visible_core_count": 0
+              }
+            ],
+            "allow_stopping_for_update": null,
+            "attached_disk": [],
+            "boot_disk": [
+              {
+                "auto_delete": true,
+                "device_name": "persistent-disk-0",
+                "disk_encryption_key_raw": "",
+                "disk_encryption_key_sha256": "",
+                "initialize_params": [
+                  {
+                    "image": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20230125",
+                    "labels": {},
+                    "size": 10,
+                    "type": "pd-ssd"
+                  }
+                ],
+                "kms_key_self_link": "",
+                "mode": "READ_WRITE",
+                "source": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/zones/europe-west2-c/disks/default-001"
+              }
+            ],
+            "can_ip_forward": false,
+            "confidential_instance_config": [],
+            "cpu_platform": "Intel Broadwell",
+            "current_status": "RUNNING",
+            "deletion_protection": false,
+            "description": "",
+            "desired_status": null,
+            "enable_display": false,
+            "guest_accelerator": [],
+            "hostname": "",
+            "id": "projects/steady-burner-372518/zones/europe-west2-c/instances/default-001",
+            "instance_id": "5782934417952827464",
+            "label_fingerprint": "42WmSpB8rSM=",
+            "labels": {},
+            "machine_type": "e2-micro",
+            "metadata": {
+              "ssh-keys": "xiashura:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDkYCJ6Vgfm27RFiSfFVkjban7TnR2t66pQkNwPLC1VAdcmcNdUX0QAcwfoJiREwb7IkquBOEGoRTtRsvhmTkFf04Xx2bk8bdPGnjQEq8KV3SpdYm1WBMIMigiz0YXiXsmIDQnrtRLr7IubnZ9eo+r0X9+vgW9qJHYsl9pRF5Cy7lec94P++jrYdxzT2el+uw1cpNJhx8NyBSak/1A8PFKG1jypgEmjwrnlZ0PRVMmFxKnO03SH0pH1looD4b6QFf/eyiB+b/Kk5grXtTS7tlq9EJtbYilTG7GoU7Oz+7WO+Yd21vwjM/vQCo3tNxcgsTJ7PZ4RR/7GzEAiKo1gX7m7k2Llx38RWgURlws8Sv0PTx/rh5JyBk8DSiSeATIm3+/oYGwidCsZ4685Ntgg3lhHyWpJpXi7qcu6djTIgTh4r5ddWopL1+wMZQYSjF50FMr/T4ir1Sft0glTLeMiPijC5AN9xunoPyEKijBt6ncxHqrdSiggaNnBiWR+ZbuQTXE= xiashura@Sergeis-MacBook-Air.local\nxiawura:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIJ/z3mxJAV/5t629/FHeydbu14HYjnESeiYSXeBvgcCktkLP4bd6BWAGw4EZKfoJOhJ8GrNibbTTFwjnpSNkfY= google-ssh {\"userName\":\"xiawura@gmail.com\",\"expireOn\":\"2023-01-31T09:07:04+0000\"}\nxiawura:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCDVLwJS73h7gT01K8cip77Bn34vjjmGoPKrIzDsCPxV9nk7gS4Yrgzlun3EfRJZpqILJ0izk4YOJL2pi7/ScRm661h648GihszOAwgOnOwX+gHWH0IIf7D7piNHtd3ZyDBnyw95bjfSftKgqJn2YVMpUgfGY+quANbpyzCKjlLKUnRVlSeBdD2WSCl/wEoeRxcup5Bm3j/x73vbZWL4FFc1CGZKSuWiUUzyIYNBHeUGiCp1kwoLOuw9XC5I2l+MNaeatr6lx+JFUoRraau36hDCcWb5pgv2Jn3LL6FR2SmE7EA63SS8sf1SJajHlSc8IYUmkbjnEkarW9rLoedPbtx google-ssh {\"userName\":\"xiawura@gmail.com\",\"expireOn\":\"2023-01-31T09:07:19+0000\"}"
+            },
+            "metadata_fingerprint": "ue7xOcSSCD0=",
+            "metadata_startup_script": null,
+            "min_cpu_platform": "",
+            "name": "default-001",
+            "network_interface": [
+              {
+                "access_config": [
+                  {
+                    "nat_ip": "34.142.27.9",
+                    "network_tier": "PREMIUM",
+                    "public_ptr_domain_name": ""
+                  }
+                ],
+                "alias_ip_range": [],
+                "ipv6_access_config": [],
+                "ipv6_access_type": "",
+                "name": "nic0",
+                "network": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/global/networks/infrastructure-gke-k8s-network",
+                "network_ip": "10.0.0.4",
+                "nic_type": "",
+                "queue_count": 0,
+                "stack_type": "IPV4_ONLY",
+                "subnetwork": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/regions/europe-west2/subnetworks/infrastructure-gke-k8s-subnet",
+                "subnetwork_project": "steady-burner-372518"
+              }
+            ],
+            "project": "steady-burner-372518",
+            "reservation_affinity": [],
+            "resource_policies": [],
+            "scheduling": [
+              {
+                "automatic_restart": true,
+                "instance_termination_action": "",
+                "min_node_cpus": 0,
+                "node_affinities": [],
+                "on_host_maintenance": "MIGRATE",
+                "preemptible": false,
+                "provisioning_model": "STANDARD"
+              }
+            ],
+            "scratch_disk": [],
+            "self_link": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/zones/europe-west2-c/instances/default-001",
+            "service_account": [
+              {
+                "email": "terraform@steady-burner-372518.iam.gserviceaccount.com",
+                "scopes": [
+                  "https://www.googleapis.com/auth/cloud-platform"
+                ]
+              }
+            ],
+            "shielded_instance_config": [
+              {
+                "enable_integrity_monitoring": true,
+                "enable_secure_boot": false,
+                "enable_vtpm": true
+              }
+            ],
+            "source_instance_template": "https://www.googleapis.com/compute/v1/projects/steady-burner-372518/global/instanceTemplates/default-instance-template-20230131083416630900000001",
+            "tags": [
+              "develop",
+              "git",
+              "git-public",
+              "ssh-public",
+              "web-public"
+            ],
+            "tags_fingerprint": "LukWsI20Vb8=",
+            "timeouts": null,
+            "zone": "europe-west2-c"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "data.google_compute_zones.available"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
+
