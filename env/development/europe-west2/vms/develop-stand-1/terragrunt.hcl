@@ -10,7 +10,7 @@ locals {
 }
 
 terraform {
-  source = "git::git@github.com:terraform-google-modules/terraform-google-vm.git//modules/compute_instance?ref=v8.0.0"
+  source = "git::git@github.com:xiashura/terraform-google-vm.git//modules/compute_instance?ref=v8.0.1"
 }
 
 generate "outputs" {
@@ -81,9 +81,8 @@ inputs = {
   subnetwork = dependency.network.outputs.subnets["europe-west2/infrastructure-gke-k8s-subnet"].name
 
   tags = [
-    dependency.firewall-ssh.outputs.firewall_rules.allow-ssh-ingress.name,
+   dependency.firewall-ssh.outputs.firewall_rules.allow-ssh-ingress.name,
   ]
-
   instance_template = dependency.template.outputs.self_link
 
   access_config = [
