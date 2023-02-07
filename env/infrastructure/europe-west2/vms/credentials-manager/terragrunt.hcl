@@ -53,6 +53,10 @@ dependency "network" {
   config_path = "${find_in_parent_folders("network")}"
 }
 
+dependency "firewall-web" {
+  config_path = "../../firewall/web-public" 
+}
+
 dependency "template" {
   config_path = "../../template/vm-ubuntu-e2-small-30gb"
 }
@@ -81,6 +85,7 @@ inputs = {
   tags = [
     "develop",
     local.env.firewall-ssh-public-tag,
+    dependency.firewall-web.outputs.firewall_rules.allow-web-ingress.name,
   ]
 
   // threads_per_core = "1"
