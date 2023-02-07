@@ -36,6 +36,7 @@ inputs = {
     ranges                  = ["0.0.0.0/0"]
     target_tags             = [
       local.env.firewall-web-public.tag,
+      local.env.firewall-web-public.name,
     ]
 
     priority = 65534

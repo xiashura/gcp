@@ -37,6 +37,7 @@ inputs = {
     ranges                  = ["0.0.0.0/0"]
     target_tags             = [
       local.env.firewall-ssh-public-tag,
+      "allow-ssh-ingress",
     ]
 
     priority = 65534
