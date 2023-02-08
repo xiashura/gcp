@@ -1,0 +1,7 @@
+
+
+
+provider "docker" {
+  # Configuration options
+}
+
