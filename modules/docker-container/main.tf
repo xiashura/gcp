@@ -19,7 +19,7 @@ resource "null_resource" "pre-docker" {
 }
 
 
-resource "docker_container" "boundary" {
+resource "docker_container" "instance" {
 
   depends_on = [
     null_resource.pre-docker,
@@ -30,6 +30,8 @@ resource "docker_container" "boundary" {
 
   hostname = var.name
 
+  privileged = var.privileged
+
   env = var.env
 
   dynamic "mounts" {
@@ -38,6 +40,13 @@ resource "docker_container" "boundary" {
       type   = mounts.value.type
       target = mounts.value.target
       source = mounts.value.source
+    }
+  }
+
+  dynamic "networks_advanced" {
+    for_each = var.networks
+    content {
+      name = networks_advanced.value.name
     }
   }
 

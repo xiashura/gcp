@@ -32,3 +32,14 @@ variable "ports" {
     protocol = string
   }))
 }
+
+variable "networks" {
+  type = list(object({
+    name = string
+  }))
+}
+
+variable "privileged" {
+  type    = bool
+  default = false
+}
