@@ -11,7 +11,8 @@ variable "name" {
   type = string
 }
 variable "env" {
-  type = list(string)
+  type      = list(string)
+  sensitive = true
 }
 variable "ssh-key-private" {
 
@@ -22,6 +23,7 @@ variable "mounts" {
     target = string
     source = string
   }))
+  default = []
 }
 
 variable "ports" {
