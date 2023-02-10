@@ -6,6 +6,8 @@ locals {
   env    = read_terragrunt_config(find_in_parent_folders("env.hcl")).locals
   region    = read_terragrunt_config(find_in_parent_folders("region.hcl")).locals
   account    = read_terragrunt_config(find_in_parent_folders("account.hcl")).locals
+
+  boundary-postgresql-password = get_env("POSTGRES_BOUNDARY_PASSWORD","veri_strong_p@ssw0rd")
 }
 
 
@@ -45,7 +47,7 @@ inputs = {
   user = "root"
   privileged = true
   env = [
-    "BOUNDARY_POSTGRES_URL=postgresql://${local.env.postgres-boundary.user}:${local.env.postgres-boundary.password}@postgres:${local.env.postgres-boundary.port}/${local.env.postgres-boundary.db}?sslmode=disable"
+    "BOUNDARY_POSTGRES_URL=postgresql://${local.env.postgres-boundary.user}:${local.boundary-postgresql-password}@postgres:${local.env.postgres-boundary.port}/${local.env.postgres-boundary.db}?sslmode=disable"
   ]
 
   networks = [
@@ -57,8 +59,8 @@ inputs = {
   mounts = [
     {
       type = "bind"
-      target = "/var/data_boundary"
-      source = "/boundary"
+      source = "/var/data_boundary"
+      target = "/boundary"
     }
   ]
 

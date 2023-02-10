@@ -7,20 +7,15 @@ locals {
   region    = read_terragrunt_config(find_in_parent_folders("region.hcl")).locals
   account    = read_terragrunt_config(find_in_parent_folders("account.hcl")).locals
 
-  boundary-postgresql-password = get_env("POSTGRES_BOUNDARY_PASSWORD","veri_strong_p@ssw0rd")
+ vault_root_token = get_env("VAULT_ROOT_TOKEN","veri_strong_p@ssw0rd")
+  
 }
 
-dependency "address" {
-  config_path = "../../address/credentials-manager"
-}
-
-dependency "network" {
-  config_path = "../docker-network-credentoals"
-}
 
 terraform {
   source = "${get_repo_root()}/modules/docker-container"
 }
+
 
 generate "provider" {
   path = "providers.tf"
@@ -35,27 +30,27 @@ generate "provider" {
   EOF
 }
 
+dependency "address" {
+  config_path = "../../address/credentials-manager"
+}
+
+dependency "network" {
+  config_path = "../docker-network-credentoals"
+}
+
 inputs = {
 
-  name = "postgres"
-  image = "postgres"
+  name = "vault"
+  image = "vault:latest"
+
 
   ssh-key-private = local.env.path-ssh-private-key
-
   host = dependency.address.outputs.address
   user = "root"
+
   env = [
-    "POSTGRES_PASSWORD=${local.boundary-postgresql-password}",
-    "POSTGRES_USER=${local.env.postgres-boundary.user}",
-    "POSTGRES_DB=${local.env.postgres-boundary.db}",
-    "PGDATA=/var/lib/postgresql/data/pgdata",
-  ]
-  mounts = [
-    {
-      type = "bind"
-      target = "/var/lib/postgresql/data/pgdata"
-      source = "/var/pg_data"
-    }
+    "VAULT_DEV_ROOT_TOKEN_ID=${local.vault_root_token}",
+    "VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200",
   ]
 
   networks = [
@@ -66,9 +61,9 @@ inputs = {
 
   ports = [ 
     {
-      external = local.env.postgres-boundary.port
-      internal = 5432
-      ip = "0.0.0.0"
+      external = "8200"
+      internal = "8200"
+      ip = "127.0.0.1"
       protocol = "tcp"
     },
   ]

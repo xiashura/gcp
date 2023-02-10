@@ -1,6 +1,11 @@
 locals {
   env = "infrastructure-gke-k8s"
-
+  path-ssh-private-key = "/Users/xiashura/.ssh/id_rsa"
+  postgres-boundary = {
+    user = "postgres"
+    port = 5432
+    db = "boundary"
+  }
 
   firewall-web-public = {
     name = "allow-web-ingress"
