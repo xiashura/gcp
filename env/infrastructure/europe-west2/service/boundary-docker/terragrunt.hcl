@@ -74,13 +74,13 @@ inputs = {
     {
       external = "9201"
       internal = "9201"
-      ip = "127.0.0.1"
+      ip = "0.0.0.0"
       protocol = "tcp"
     },
     {
       external = "9202"
       internal = "9202"
-      ip = "127.0.0.1"
+      ip = "0.0.0.0"
       protocol = "tcp"
     },
   ]

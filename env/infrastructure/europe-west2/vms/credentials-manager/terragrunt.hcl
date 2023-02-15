@@ -57,6 +57,11 @@ dependency "firewall-web" {
   config_path = "../../firewall/web-public" 
 }
 
+
+dependency "boundary-public" {
+  config_path = "../../firewall/boundary-public" 
+}
+
 dependency "template" {
   config_path = "../../template/vm-ubuntu-e2-small-30gb"
 }
@@ -84,8 +89,11 @@ inputs = {
 
   tags = [
     "develop",
+
     local.env.firewall-ssh-public-tag,
     dependency.firewall-web.outputs.firewall_rules.allow-web-ingress.name,
+
+    dependency.boundary-public.outputs.firewall_rules.allow-boundary-ingress.name,
   ]
 
   // threads_per_core = "1"
