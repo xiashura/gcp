@@ -39,6 +39,7 @@ variable "networks" {
   type = list(object({
     name = string
   }))
+  default = []
 }
 
 variable "privileged" {
