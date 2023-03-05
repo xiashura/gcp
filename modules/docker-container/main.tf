@@ -40,8 +40,8 @@ resource "docker_container" "instance" {
   dynamic "capabilities" {
     for_each = var.capabilities
     content {
-      add  = var.capabilities.add
-      drop = var.capabilities.drop
+      add  = capabilities.value.add
+      drop = capabilities.value.drop
     }
   }
 
