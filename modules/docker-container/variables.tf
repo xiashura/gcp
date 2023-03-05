@@ -22,6 +22,15 @@ variable "command" {
 variable "ssh-key-private" {
 
 }
+
+variable "capabilities" {
+  type = list(object({
+    add  = optional(list(string), [])
+    drop = optional(list(string), [])
+  }))
+  default = []
+}
+
 variable "mounts" {
   type = list(object({
     type   = string

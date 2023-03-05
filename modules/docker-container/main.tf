@@ -36,6 +36,15 @@ resource "docker_container" "instance" {
 
   command = var.command
 
+
+  dynamic "capabilities" {
+    for_each = var.capabilities
+    content {
+      add  = var.capabilities.add
+      drop = var.capabilities.drop
+    }
+  }
+
   dynamic "mounts" {
     for_each = var.mounts
     content {
