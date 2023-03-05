@@ -34,6 +34,8 @@ resource "docker_container" "instance" {
 
   env = var.env
 
+  command = var.command
+
   dynamic "mounts" {
     for_each = var.mounts
     content {

@@ -14,6 +14,11 @@ variable "env" {
   type      = list(string)
   sensitive = true
 }
+
+variable "command" {
+  type = list(string)
+}
+
 variable "ssh-key-private" {
 
 }
